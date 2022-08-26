@@ -1,0 +1,9 @@
+(function(){/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+'use strict';var d="function"==typeof Object.create?Object.create:function(a){function b(){}b.prototype=a;return new b};function e(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var c=a[b];if(c&&c.Math==Math)return c}throw Error("Cannot find global object");}var f=e(this),g;
+if("function"==typeof Object.setPrototypeOf)g=Object.setPrototypeOf;else{var h;a:{var m={a:!0},n={};try{n.__proto__=m;h=n.a;break a}catch(a){}h=!1}g=h?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+" is not extensible");return a}:null}var p=g;var q={h:"from_date",i:"to_date",g:"currentdateoverride"},r=[],t=0,u;for(u in q)r[t++]=q[u];function v(){return HTMLElement.call(this)||this}var w=HTMLElement;v.prototype=d(w.prototype);v.prototype.constructor=v;if(p)p(v,w);else for(var x in w)if("prototype"!=x)if(Object.defineProperties){var y=Object.getOwnPropertyDescriptor(w,x);y&&Object.defineProperty(v,x,y)}else v[x]=w[x];v.prototype.attributeChangedCallback=function(){this.checkDate()};
+v.prototype.checkDate=function(){var a=this.getAttribute("from_date"),b=this.getAttribute("to_date");if(a&&b){a=new Date(a);b=new Date(b);var c=this.getAttribute("currentdateoverride");var k=c?new Date(c):new Date;k.setMilliseconds(0);c=k.getTime()-a.getTime();b=k.getTime()-b.getTime();a=!1;0>c?b="before":0<=c&&0>=b?(b="during",a=!0):b="after";var l=void 0===l?null:l;c=document.createEvent("CustomEvent");c.initCustomEvent(b,!0,!0,l);this.dispatchEvent(c);a&&"none"==this.style.display?this.style.display=
+"":a||"none"==this.style.display||(this.style.display="none")}};f.Object.defineProperties(v,{observedAttributes:{configurable:!0,enumerable:!0,get:function(){return r}}});customElements.define("gwd-dateswap",v);}).call(this);

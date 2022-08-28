@@ -32,10 +32,12 @@ app.get('/', (req, res) => {
 });
 
 // routing for restaurants 
-app.use('/search/restaurant?',flickrRouter); 
+app.use('/search/restaurants/',restaurantRouter); 
 
 // routing for forecasting 
-app.use('/search/forecast?')
+app.use('/search/forecasts/', forecastRouter)
+
+// begin listening 
 app.listen(port, function () {
     console.log(`Express app listening at http://${hostname}:${port}/`);
 });

@@ -203,8 +203,8 @@
     <gwd-page id="page1" class="gwd-page-wrapper page1-content gwd-lightbox gwd-page-1xqf" data-gwd-width="100%" data-gwd-height="100%">
       <div class="gwd-page-content page1-content gwd-div-19zn"><strong class="gwd-strong-1u7y">A BIG NIGHT MASHUP</strong>
         <strong class="gwd-strong-1sdk gwd-strong-1j18 gwd-strong-rdjj">Basic Usage</strong><strong class="gwd-strong-1sdk gwd-strong-1j18 gwd-strong-rdjj gwd-strong-1ksa">Event ID:</strong><strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1qsb">Search for weather forecast around an event using your ticketmaster event ID:</strong>
-        <strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-7csh">Search for Restaurants around your event using your ticketmaster event ID:</strong><strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-1ne7 gwd-strong-1sna" id="restURL">&nbsp;https://localhost:3000/search/restaurants/</strong>
-        <strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-1ne7 gwd-strong-1ic3" id="forecastURL">&nbsp;https://localhost:3000/search/forecast/</strong>
+        <strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-7csh">Search for Restaurants around your event using your ticketmaster event ID:</strong><strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-1ne7 gwd-strong-1sna" id="restURL">&nbsp;http://localhost:3000/search/restaurants/</strong>
+        <strong class="gwd-strong-1sdk gwd-strong-101a gwd-strong-1n9h gwd-strong-1ne7 gwd-strong-1ic3" id="forecastURL">&nbsp;http://localhost:3000/search/forecast/</strong>
         <p class="gwd-p-kwjl">Landing&nbsp;page Version 0.1</p><span class="gwd-span-1h6e gwd-span-riwz">A useful Mashup to help plan your night!&nbsp;<br><br><br><br><br></span>
         <input type="text" id="eventIn" class="gwd-input-ahga" value="Event ID">
       </div>
@@ -221,8 +221,8 @@
     function updateURL() {
       var x = document.getElementById("eventIn").value;
 
-      document.getElementById("restURL").innerHTML = "https://localhost:3000/search/restaurants/" + x;
-      document.getElementById("forecastURL").innerHTML = "https://localhost:3000/search/forecast/" + x;
+      document.getElementById("restURL").innerHTML = "http://localhost:3000/search/restaurants/" + x;
+      document.getElementById("forecastURL").innerHTML = "http://localhost:3000/search/forecast/" + x;
     }
 
     (function() {
